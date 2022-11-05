@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial on error object</title>
+  </head>
+  <body>
+    <script>
+      //   try {
+      //     siddhu;
+      //   } catch (error) {
+      //     console.log(error.name);
+      //     console.log(error.message);
+      //     console.log(error.stack);
+      //   }
+
+      let age = prompt("Enter your age.");
+      age = Number.parseInt(age);
+
+      if (age > 189) {
+        // let error = new Error("An error occured");
+        let error = new SyntaxError("An error occured");
+        console.log(error.name);
+        console.log(error.message);
+        console.log(error.stack);
+        throw error;
+      }
+    </script>
+  </body>
+</html>

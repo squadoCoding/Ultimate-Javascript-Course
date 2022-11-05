@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      This is a very good tutorial on Javascript html insertion methods
+    </title>
+  </head>
+  <body>
+    <section class="firts">
+      I am the first element of this beautiful web page
+    </section>
+  </body>
+  <script>
+    const first = document.getElementsByTagName("section")[0];
+    // first.innerHTML += "<h1>Hellow, World</h1>";
+    const h1 = document.createElement("h1");
+    h1.textContent = "Hellow, World2";
+    // first.append(h1);
+    // first.appendChild(h1);
+    // first.prepend(h1);
+    // first.before(h1);
+    // first.after(h1);
+    // first.replaceWith(h1);
+  </script>
+</html>

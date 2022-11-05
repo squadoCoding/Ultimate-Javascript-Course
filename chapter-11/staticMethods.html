@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static methods in javascript</title>
+  </head>
+  <body>
+    <script>
+      class animal {
+        constructor(name) {
+          this.name = animal.capitalize(name);
+        }
+        walk() {
+          console.log(this.name + " is walking");
+        }
+        static capitalize(str) {
+          return str.charAt(0).toUpperCase() + str.slice(1, str.length);
+        }
+      }
+
+      const vishva = new animal("vishva");
+      vishva.walk();
+    </script>
+  </body>
+</html>

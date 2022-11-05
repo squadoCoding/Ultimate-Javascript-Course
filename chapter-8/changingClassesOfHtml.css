@@ -1,0 +1,22 @@
+.red {
+  background-color: red;
+  color: white;
+}
+
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+.yellow {
+  background-color: yellow;
+  color: white;
+}
+
+.text-dark {
+  color: black;
+}
+
+.text-big {
+  font-size: 1.5rem;
+}

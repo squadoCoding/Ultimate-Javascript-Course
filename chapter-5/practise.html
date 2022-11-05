@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is practise of javascript chapter 5</title>
+  </head>
+  <body></body>
+  <script>
+    // Question 1:-
+    // let nums = [];
+    // let numOfElements = prompt("Enter the number of numbers you want to store");
+    // numOfElements = Number.parseInt(numOfElements);
+
+    // for (let i = 0; i < numOfElements; i++) {
+    //   let currentElement = prompt("Enter element number : " + i);
+    //   currentElement = Number.parseInt(currentElement);
+    //   nums.push(currentElement);
+    // }
+
+    // alert("Your array now looks like : " + nums);
+
+    // Question 2:-
+    // let nums = [];
+    // let currentElement = prompt("Enter your array element");
+    // currentElement = Number.parseInt(currentElement);
+
+    // do {
+    //   nums.push(currentElement);
+    //   currentElement = prompt("Enter your array element");
+    //   currentElement = Number.parseInt(currentElement);
+    // } while (currentElement != 0);
+    // alert("Your array now looks like : " + nums);
+
+    // Question 3:-
+    // let arr = [40, 78, 50, 70, 100, 1000];
+    // const compare = (a) => {
+    //   return a % 10 == 0;
+    // };
+    // let n = arr.filter(compare);
+    // console.log(n);
+
+    // Question 4:-
+    // let arr = [5, 34, 67, 89];
+    // let newArr = arr.map((value) => {
+    //   return value ** 2;
+    // });
+
+    // console.log(newArr);
+
+    // Question 4:-
+    let arr = [1, 2, 3, 4];
+    let newArr = arr.reduce((prev, curr) => {
+      return prev * curr;
+    });
+
+    console.log(newArr);
+  </script>
+</html>

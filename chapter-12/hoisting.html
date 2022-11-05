@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <script>
+      // Hoisting: Hoisting in javascript refers to the process done by the interpreter in which all the declarations are appeared to be moved to the top of the code before execution.
+      console.log(a);
+      sayHellow();
+      // var sayHellow = () => {
+      //   console.log("Hellow!!");
+      // }
+      function sayHellow() {
+        console.log("Hellow!!");
+      }
+      // Note that function declarations and class declarations are hoisted to the top but function expressions and class expressions are not
+      var a = 34;
+      // let a = 34;
+      console.log(a);
+    </script>
+    <script
+      src="https://replit.com/public/js/replit-badge.js"
+      theme="blue"
+      defer
+    ></script>
+  </body>
+</html>

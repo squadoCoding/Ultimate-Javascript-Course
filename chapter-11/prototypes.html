@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      javascript chapter-11 object oriented programming - Prototypes in
+      javascript
+    </title>
+  </head>
+  <body>
+    <script>
+      const a = {
+        name2: "siddhant",
+        class: 8,
+        haveHobby: true,
+        hobby: "coding",
+        run: () => {
+          alert("self run");
+        },
+      };
+      console.log(a);
+      const p = {
+        run: () => {
+          alert("running...");
+        },
+      };
+      a.__proto__ = p;
+      a.run();
+      p.__proto__ = {
+        name: "Jack",
+      };
+      console.log(a.name);
+    </script>
+  </body>
+</html>

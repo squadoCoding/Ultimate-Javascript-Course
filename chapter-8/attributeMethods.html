@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is a very nice tutorial of Javascript attribute methods</title>
+  </head>
+  <body>
+    <div id="e1" class="element" data-game="mario" data-coder="siddhant">
+      I am a very good element child of body tag
+    </div>
+  </body>
+  <script>
+    let e1 = document.getElementById("e1");
+    let a = e1.getAttribute("class");
+
+    console.log(a);
+    console.log(e1.hasAttribute("class"));
+    console.log(e1.hasAttribute("stylel̥ō"));
+
+    // e1.setAttribute("class", "sach");
+    // e1.removeAttribute("class");
+    console.log(e1.attributes);
+    console.log(e1.dataset);
+    console.log(e1.dataset.game);
+    console.log(e1.dataset.coder);
+  </script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      This is a tutorial on how to use insertAdjacentHtml/Text/Element in
+      javasript
+    </title>
+  </head>
+  <body>
+    <section id="sec-1">I am the best section of this whole page</section>
+    <script>
+      const sec_1 = document.getElementById("sec-1");
+      //   sec_1.insertAdjacentHTML("beforeend", "<div>beforeend</div>");
+      //   sec_1.insertAdjacentHTML("beforebegin", "<div>beforebegin</div>");
+      //   sec_1.insertAdjacentHTML("afterend", "<div>afterend</div>");
+      //   sec_1.insertAdjacentHTML("afterbegin", "<div>afterbegin</div>");
+
+      sec_1.remove();
+    </script>
+  </body>
+</html>

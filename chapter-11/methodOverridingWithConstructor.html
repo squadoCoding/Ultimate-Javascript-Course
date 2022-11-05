@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is method overriding works with constructor</title>
+  </head>
+  <body>
+    <script>
+      class Employee {
+        constructor(name) {
+          this.name = name;
+          console.log(`${name}- Employee's constructor is here...`);
+        }
+
+        requestLeaves(leaves) {
+          console.log(`The employee has requested ${leaves} leaves.`);
+        }
+        requestMoreSalary(salaryIncrease) {
+          console.log(
+            "The employee has requested the salary high of " + salaryIncrease
+          );
+        }
+      }
+      class Programmer extends Employee {
+        // constructor(...args) {// if there is no constructor in child class then the javascript engine automatically creates a constructor like this (Javascript engine mahan hai)
+        //   super(...args);
+        // };
+        constructor(name) {
+          super(name);
+          console.log(`This is a newly created constructor.`);
+        }
+        requestLeaves(leaves) {
+          super.requestLeaves(leaves);
+          console.log(
+            `Hey, programmer you got ${
+              leaves + 2
+            } leaves (two extra because of your great work and dedication.`
+          );
+        }
+        orderCoffee() {
+          console.log(
+            "Programmer has ordered a coffee,so please provide it to him/her"
+          );
+        }
+      }
+
+      const pruthvi = new Employee("Pruthviraj Ramdas Giri");
+      pruthvi.requestLeaves(3);
+      const siddhant = new Programmer("Siddhant Ramdas Giri");
+      siddhant.orderCoffee();
+      siddhant.requestLeaves(3);
+      console.log(siddhant.name);
+      console.log(pruthvi.name);
+    </script>
+  </body>
+</html>

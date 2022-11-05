@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is a tutorial on Async/Await syntax in javascript</title>
+  </head>
+  <body>
+    <script>
+      const siddhant = async () => {
+        const delhiWeather = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("56 deg");
+          }, 3000);
+        });
+        const mumbaiWeather = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("37 deg");
+          }, 5000);
+        });
+
+        // delhiWeather.then((value) => {
+        //   console.log("The temperature of Delhi is " + value);
+        // });
+        // mumbaiWeather.then((value) => {
+        //   console.log("The temperature of Mumbai is " + value);
+        // });
+
+        console.log("Fetching Mumbai weather, Please wait...");
+        const mumbaiTemp = await mumbaiWeather;
+        console.log("Fetching Delhi weather, Please wait...");
+        const delhiTemp = await delhiWeather;
+
+        console.log("The temperature of Delhi is " + delhiTemp);
+        console.log("And the temperature of Mumbai is " + mumbaiTemp);
+
+        // return 56;
+      };
+      const pruthvi = () => {
+        console.log("Pruthvi the gamer is here...");
+      };
+      const codeMain = async () => {
+        await siddhant();
+        await pruthvi();
+      };
+
+      codeMain();
+      // siddhant().then((value) => {
+      //   console.log(value);
+      // });
+    </script>
+  </body>
+</html>

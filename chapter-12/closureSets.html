@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure sets in Javascript</title>
+  </head>
+  <body>
+    <script>
+      // A closure is a combination of a function enclosed with it's surrounding state (lexicle environment).In other words colsure gives us access to an outer function's scope from an inner functon.
+
+      // Example-1
+      // let message = "good global";
+      // const hellow1 = () => {
+      //   let message = "Good morning";
+      //   {
+      //     let message = "Good afternood";
+      //     console.log("Hellow-1 " + message);
+      //   }
+      //   const hellow2 = () => {
+      //     console.log("hellow-2 " + message);
+      //   }
+      //   message = "Good neight";
+
+      //   return hellow2;
+      // }
+
+      // let c = hellow1();
+      // c();
+
+      function returnFunc() {
+        const x = () => {
+          let a = 1;
+          console.log(a);
+          const y = () => {
+            // let a = 2;
+            console.log(a);
+            const z = () => {
+              // let a = 3;
+              console.log(a);
+            };
+            z();
+          };
+          a = 999;
+          y();
+        };
+        return x;
+      }
+
+      const f = returnFunc();
+      f();
+    </script>
+  </body>
+</html>

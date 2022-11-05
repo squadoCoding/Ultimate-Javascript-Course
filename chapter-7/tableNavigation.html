@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is a tutorial on table navigation</title>
+  </head>
+  <body>
+    <table border>
+      <caption>
+        This is a table of coders
+      </caption>
+      <thead>
+        <tr>
+          <th>TH-1</th>
+          <th>TH-2</th>
+          <th>TH-3</th>
+          <th>TH-4</th>
+          <th>TH-5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TD-1</td>
+          <td>TD-2</td>
+          <td>TD-3</td>
+          <td>TD-4</td>
+          <td>TD-5</td>
+        </tr>
+        <tr>
+          <td>TD-6</td>
+          <td>TD-7</td>
+          <td>TD-8</td>
+          <td>TD-9</td>
+          <td>TD-10</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <script>
+    let myTable = document.body.firstElementChild;
+    console.log(myTable.rows);
+    console.log(myTable.caption);
+    console.log(myTable.tHead);
+    console.log(myTable.tFoot);
+    console.log(myTable.tBodies);
+
+    console.log(myTable.rows[0].cells);
+    console.log(myTable.rows[0].rowIndex);
+    console.log(myTable.rows[2].sectionRowIndex);
+    console.log(myTable.rows[0].cells[2].cellIndex);
+  </script>
+</html>

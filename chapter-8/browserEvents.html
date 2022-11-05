@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is a tutorial on browser events handeling in javascript</title>
+  </head>
+  <body>
+    <!-- <div
+      class="container"
+      onmouseenter="console.log('Container ke andar mouse gaya')"
+      onclick="console.log('Container pe click hua')"
+    >
+      <p>I am the best paragraph on this page.</p>
+      <button onclick="console.log('hellow')">btn</button>
+    </div> -->
+    <!-- If an event is written in html as well as javascript than the one that is written in javascript will be considered -->
+    <div class="container">
+      <p>I am the best paragraph on this page.</p>
+      <button>btn</button>
+    </div>
+  </body>
+  <script>
+    // document.getElementsByClassName("container")[0].onclick = () => {
+    //   console.log("Container pe click hua");
+    // };
+    // document.getElementsByClassName("container")[0].onmouseenter = () => {
+    //   console.log("Container ke andar mouse gaya");
+    // };
+    // document.getElementsByTagName("button")[0].onclick = () => {
+    //   console.log("hellow");
+    // };
+
+    //! In this program the removeEventListener() will not work as the referance of functions given in add and removeEventListener() should be same
+    // document.getElementsByTagName("button")[0].addEventListener("click", () => {
+    //   alert("Hellow, world");
+    // });
+    // document.getElementsByTagName("button")[0].addEventListener("click", () => {
+    //   alert("Hellow, world-2");
+    // });
+
+    // let favNum = prompt("What is your favourate number?");
+
+    // if (favNum == "2") {
+    //   document
+    //     .getElementsByTagName("button")[0]
+    //     .removeEventListener("click", () => {
+    //       alert("Hellow, world");
+    //     });
+    // }
+
+    let x = (e) => {
+      console.log(e);
+      console.log(e.target);
+      console.log(e.type);
+      console.log(e.clientX);
+      console.log(e.clientY);
+      // alert("Hellow, world");
+    };
+    let y = (e) => {
+      console.log(e);
+      alert("Hellow, world-2");
+    };
+
+    document.getElementsByTagName("button")[0].addEventListener("click", x);
+    // document.getElementsByTagName("button")[0].addEventListener("click", y);
+
+    // let favNum = prompt("What is your favourate number?");
+
+    // if (favNum == "2") {
+    //   document
+    //     .getElementsByTagName("button")[0]
+    //     .removeEventListener("click", x);
+    // }
+  </script>
+</html>

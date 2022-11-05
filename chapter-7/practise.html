@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      This is the practise of javascript chapter 7 - walking the DOM
+    </title>
+  </head>
+  <body>
+    <!--Question -1-->
+    <header id="header">
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--Question -2-->
+      <table>
+        <tr>
+          <th>name</th>
+          <th>Score</th>
+          <th>roll no.</th>
+        </tr>
+        <tr>
+          <td>Siddhant</td>
+          <td>100%</td>
+          <td>19</td>
+        </tr>
+        <tr>
+          <td>Tejas</td>
+          <td>99%</td>
+          <td>27</td>
+        </tr>
+      </table>
+      <!--Question-3-->
+      <div class="container">
+        <apan>span 1</apan>
+        <apan>span 2</apan>
+        <apan>span 3</apan>
+      </div>
+    </main>
+  </body>
+  <script>
+    // Question-1
+    const nav = document.getElementById("header").firstElementChild;
+    nav.firstElementChild.firstElementChild.style.backgroundColor = "red";
+
+    // Question-3
+    const container = document.querySelector(".container");
+    container.firstElementChild.style.backgroundColor = "green";
+    container.lastElementChild.style.backgroundColor = "green";
+
+    // Question-4
+    const lis = document.getElementsByTagName("li");
+    Array.from(lis).forEach((li) => {
+      li.style.color = "cyan";
+    });
+  </script>
+</html>

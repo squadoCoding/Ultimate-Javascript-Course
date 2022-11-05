@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>%his is a tutorial on error handeling in javascript</title>
+  </head>
+  <body>
+    <script>
+      setTimeout(() => {
+        console.log("Hacking the whatsapp of Rahul...");
+      }, 1000);
+      try {
+        //   console.log(Rahul);
+        setTimeout(() => {
+          try {
+            console.log(Rahul);
+          } catch (error) {
+            console.log("An error occured in this script");
+          }
+        }, 100);
+      } catch (error) {
+        console.log("An error occured in this script");
+      }
+      setTimeout(() => {
+        console.log("Fetching the whatsapp number of Rahul...");
+      }, 2000);
+      setTimeout(() => {
+        console.log("Fetching the whatsapp password of Rahul...");
+      }, 3000);
+      setTimeout(() => {
+        console.log("Fetched!Account hacked");
+      }, 4000);
+    </script>
+  </body>
+</html>

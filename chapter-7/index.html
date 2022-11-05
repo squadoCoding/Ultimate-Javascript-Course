@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walking the DOM</title>
+    <script>
+      console.log(document.body);
+    </script>
+  </head>
+  <body>
+    <!-- <span>Hellow this is me</div>This is an invalid HTML but it will be auto corrected by the browser -->
+    <span>I am a very good span</span>
+    <div>
+      <p>This is a very good paragraph</p>
+      <span>sibling</span>
+    </div>
+  </body>
+  <script>
+    // console.log(document.body.firstChild);
+    // console.log(document.body.lastChild);
+    // console.log(document.body.childNodes);
+    // console.log(document.body.childNodes[1]);
+    // let arr = Array.from(document.body.childNodes);
+    // console.log(arr);
+
+    // console.log(document.body.firstElementChild.nextElementSibling);
+    // console.log(document.body.firstElementChild.parentNode);
+    // console.log(document.body.firstElementChild.parentElement);
+    // console.log(document.body.hasChildNodes());
+
+    console.log(document.body.firstElementChild.nextElementSibling);
+    console.log(document.body.lastElementChild.previousElementSibling);
+    console.log(document.body.firstElementChild.parentElement);
+  </script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/changingClassesOfHtml.css" />
+    <title>This is a tutorial om javascript className and classList</title>
+  </head>
+  <body>
+    <span class="yellow text-dark">I am a span</span>
+  </body>
+  <script>
+    const span = document.body.firstElementChild;
+    // span.className = "red";
+    console.log(span.classList);
+    span.classList.remove("text-dark");
+    span.classList.add("text-big");
+    span.classList.toggle("text-dark");
+    console.log(span.classList.contains("yellow"));
+  </script>
+</html>

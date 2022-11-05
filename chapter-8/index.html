@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      This is chapter no. 8 of javascript - Events and other DOM properties
+    </title>
+  </head>
+  <body>
+    hi, hellow, bolo
+    <span>hellow I am a very good span</span>
+    <strong>I am the strongest element on this page</strong>
+    <script>
+      console.log(document.getElementsByTagName("span")[0]);
+      console.dir(document.getElementsByTagName("span")[0]);
+
+      console.log(document.body.firstChild.nodeName);
+      console.log(document.body.firstElementChild.nodeName);
+      console.log(document.body.firstElementChild.tagName);
+
+      console.log(document.body.innerHTML);
+      console.log(document.body.innerText);
+      document.body.innerHTML += `<i>Hellow, I am an intelligent italic tag</i>`;
+      console.log(document.body.outerHTML);
+
+      console.log(document.body.firstChild.nodeValue);
+      console.log(document.body.firstChild.data);
+    </script>
+  </body>
+</html>

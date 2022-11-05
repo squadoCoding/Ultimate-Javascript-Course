@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is the tutorial on Promise API in javascript</title>
+  </head>
+  <body>
+    <script>
+      const p1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          //   resolve("value-1");
+          reject(new Error("sorry this promise has been rejected"));
+        }, 1000);
+      });
+      const p2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("value-2");
+          //   reject("value-2");
+        }, 2000);
+      });
+      const p3 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("value-3");
+        }, 3000);
+      });
+
+      //   p1.then((value) => {
+      //     console.log(value);
+      //   });
+      //   p2.then((value) => {
+      //     console.log(value);
+      //   });
+      //   p3.then((value) => {
+      //     console.log(value);
+      //   });
+
+      //   const allPromises = Promise.all([p1, p2, p3]);
+      //   const allPromises = Promise.allSettled([p1, p2, p3]);
+      //   const allPromises = Promise.race([p1, p2, p3]);
+      //   const allPromises = Promise.any([p1, p2, p3]);
+      //   const allPromises = Promise.resolve(6);
+      const allPromises = Promise.reject(new Error("Hey"));
+      allPromises.then((value) => {
+        console.log(value);
+      });
+    </script>
+  </body>
+</html>

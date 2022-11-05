@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter-11 practise set</title>
+  </head>
+  <body>
+    <script>
+      // Question-1+2+5
+      class ComplxNum {
+        constructor(real, imag) {
+          this.real = real;
+          this.imagionary = imag;
+        }
+        static add(comp1, comp2) {
+          return new ComplxNum(
+            comp1.real + comp2.real,
+            comp1.imagionary + comp2.imagionary
+          );
+        }
+        get real() {
+          return this._real;
+        }
+        get imagionary() {
+          return this._imagionary;
+        }
+        set real(newReal) {
+          this._real = newReal;
+        }
+        set imagionary(newImag) {
+          this._imagionary = newImag;
+        }
+      }
+
+      const a = new ComplxNum(5, 8);
+      const b = new ComplxNum(3, 2);
+      console.log(a.real);
+      b.imagionary = 8;
+      console.log(b);
+      console.log(ComplxNum.add(a, b));
+
+      // Question-3
+      //   class Human {
+      //     constructor(name, address) {
+      //       this.name = name;
+      //       this.address = address;
+      //     }
+      //     takeAMeal() {
+      //       console.log(`${this.name} is enjoying a meal, please don't disturb`);
+      //     }
+      //   }
+      //   class Student extends Human {
+      //     constructor(rollNo, ...args) {
+      //       super(...args);
+      //       this.rollNum = rollNo;
+      //     }
+      //     takeAMeal() {
+      //       console.log(
+      //         `Student ${this.name} is enjoying the meal, please don't disturb`
+      //       );
+      //     }
+      //   }
+
+      //   const human = new Human("Vishva", "kalika nagar");
+      //   const student = new Student(19, "Vishva", "kalika nagar");
+
+      //   human.takeAMeal();
+      //   student.takeAMeal();
+
+      //   // Question-4
+      //   console.log(student instanceof Human);
+    </script>
+  </body>
+</html>

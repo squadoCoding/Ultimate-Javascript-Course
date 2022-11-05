@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      This is method overriding and use of super keyword in javascript
+    </title>
+  </head>
+  <body>
+    <script>
+      class Employee {
+        requestLeaves(leaves) {
+          console.log(`The employee has requested ${leaves} leaves.`);
+        }
+        requestMoreSalary(salaryIncrease) {
+          console.log(
+            "The employee has requested the salary high of " + salaryIncrease
+          );
+        }
+      }
+      class Programmer extends Employee {
+        // Function over riding
+        // requestLeaves = (leaves) => {
+        //   console.log(`A mahan programmer has requested ${leaves} leaves, so provide him/her 2 extra leaves.`);
+        //   console.log(`You are provided ${leaves + 2}  leaves (two extra leaves)`);
+        // };
+
+        // Super keyword
+        requestLeaves(leaves) {
+          super.requestLeaves(leaves);
+          console.log(
+            `Hey, programmer you got ${
+              leaves + 2
+            } leaves (two extra because of your great work and dedication.`
+          );
+        }
+        orderCoffee() {
+          console.log(
+            "Programmer has ordered a coffee,so please provide it to him/her"
+          );
+        }
+      }
+
+      const pruthvi = new Employee();
+      const siddhant = new Programmer();
+
+      pruthvi.requestLeaves(3);
+      siddhant.orderCoffee();
+      siddhant.requestLeaves(3);
+    </script>
+  </body>
+</html>

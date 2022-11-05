@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is a tutorial on finally clause</title>
+  </head>
+  <body>
+    <script>
+      const f = () => {
+        try {
+          let a = 0;
+          //   console.log(b);
+          console.log("This program ran successfully!!");
+          return;
+        } catch (error) {
+          throw new Error("Program could not run successfully...");
+        } finally {
+          console.log("I am a good boy.");
+          // close the file
+          // exit the loop
+          // write in the log file
+        }
+      };
+
+      f();
+      console.log("end");
+    </script>
+  </body>
+</html>

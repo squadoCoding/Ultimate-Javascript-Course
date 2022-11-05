@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is a tutorial on javascript inharitance</title>
+  </head>
+  <body>
+    <script>
+      class animal {
+        constructor(name, color) {
+          this.name = name;
+          this.color = color;
+        }
+
+        run = () => {
+          console.log(this.name + " is running");
+        };
+
+        shout = () => {
+          console.log(this.name + " is shouting");
+        };
+      }
+      class monkey extends animal {
+        eatBanana = () => {
+          console.log(this.name + " is eating bananas>...");
+        };
+      }
+
+      const ani = new animal("Pikachu", "yellow");
+      const m = new monkey("chimpu", "brown");
+
+      m.eatBanana();
+      ani.shout();
+      m.run();
+    </script>
+  </body>
+</html>

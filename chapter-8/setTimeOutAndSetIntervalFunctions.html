@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      This is a tutorial on setTimeOut and setInterval functions in javascript
+    </title>
+  </head>
+  <body></body>
+  <script>
+    // let timerId1 = setTimeout(() => {
+    //   alert("Hey, I am inside the setTimeout");
+    // }, 3000);
+
+    // we can stop the execution of setTimeout()
+    // if (1 < 2) {
+    //   clearTimeout(timerId1);
+    // }
+
+    let i = 0;
+    let timerId2 = setInterval(() => {
+      document.body.innerHTML += "<p>hwllow. world</p>";
+      i++;
+      // we can stop execution of setInterval()
+      if (i == 5) {
+        clearInterval(timerId2);
+      }
+    }, 1000);
+  </script>
+</html>

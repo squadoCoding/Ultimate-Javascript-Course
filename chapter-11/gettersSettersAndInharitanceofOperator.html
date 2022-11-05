@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getters, Setters and Inharitanceof operator</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(_name) {
+          this._name = _name;
+        }
+        fly() {
+          console.log(`${this.name} is flying in the sky.`);
+        }
+        get name() {
+          return this._name.toUpperCase();
+        }
+        set name(newName) {
+          this._name = newName;
+        }
+      }
+      class Rabbit extends Animal {
+        fly() {
+          console.log("Sorry, but rabbits cannot fly.");
+        }
+        eatCarrot() {
+          console.log(`${this.name} is eating carrot.`);
+        }
+      }
+      const anim = new Animal("Jackie");
+      const anim2 = new Rabbit("Sonu");
+      const anim3 = {
+        name: "vishva",
+        class: 3,
+        favSub: "Sports",
+      };
+      anim.fly();
+      anim2.fly();
+      anim2.eatCarrot();
+      console.log(anim.name);
+      console.log(anim instanceof Animal);
+      console.log(anim2 instanceof Rabbit);
+      console.log(anim2 instanceof Animal);
+      console.log(anim instanceof Rabbit);
+      console.log(anim3 instanceof Animal || anim3 instanceof Rabbit);
+    </script>
+  </body>
+</html>
